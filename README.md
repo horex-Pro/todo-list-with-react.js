@@ -1,3 +1,16 @@
+# Todo List Application
+
+This is a web-based application for managing your tasks and to-dos. You can create and manage multiple lists, add tasks to them, and mark them as completed when you've finished them.
+
+# Features
+
+Create multiple lists to organize your tasks. <br/>
+Add new tasks to your lists with a title and optional description. <br/>
+Mark tasks as completed when you've finished them. <br/>
+Edit or delete tasks if you need to make changes. <br/>
+Responsive design that works well on desktop and mobile devices.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
