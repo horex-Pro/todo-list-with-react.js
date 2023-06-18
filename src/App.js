@@ -1,9 +1,9 @@
 import TodoApp from "./components/TodoApp/TodoApp";
+import styles from './App.css'
 
 const App = () => {
   return ( 
-    <div className="app">
-      <h1>Todo List App</h1>
+    <div className="app" style={styles.app}>
       <TodoApp/>
     </div>
    );
