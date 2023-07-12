@@ -2,6 +2,7 @@ import { useState } from "react";
 import TodoForm from "../TodoForm/TodoForm";
 import TodoList from "../TodoList/TodoList";
 import styles from './TodoApp.module.css'
+import UncompletedCount from "../UncompletedCounter/UncompletedCounter";
 
 const TodoApp = () =>
 {
@@ -18,8 +19,9 @@ const TodoApp = () =>
             <h1>Todo List App</h1>
             
             <div className={ styles.container } >
-                <div className={styles.row}>
-                    <h2>uncompleted task</h2>
+                <div className={ styles.row }>
+                    <UncompletedCount/>
+                    <h2>Uncompleted Task</h2>
                     <select>
                         <option value='all'>All</option>
                     </select>

@@ -5,6 +5,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: space-between;
+    
 }
 
 .container{
@@ -19,12 +20,24 @@
     backdrop-filter: blur(16.5px);
     border-radius: 76px;
     padding-top: 30px;
+    overflow: auto;
 }
- h1{
+
+::-webkit-scrollbar{
+    display: none;
+}
+ h1 , h2{
+    font-weight: 600;
     color: #fff;
 }
+
+h2{
+    font-weight: 400;
+}
+
 .row{
-    width: 28%;
+    width: 45%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }

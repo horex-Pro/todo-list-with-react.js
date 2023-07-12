@@ -1,4 +1,5 @@
-import {  useState } from "react";
+import { useState } from "react";
+import styles from './TodoForm.module.css'
 
 const TodoForm = ( props ) =>
 {
@@ -27,36 +28,22 @@ const TodoForm = ( props ) =>
             }
         
         )
-
-        
-        // const newTodo = {
-        //     title: e.target.title.value,
-        //     description: e.target.description.value,
-        //     id: Math.floor( Math.random() * 1000 ),
-        //     isCompleted: false,
-        // };
-
-        // setTodo( { todo } );
-        
-        
+            
         e.preventDefault()
         props.addTodo( todo )
         
         setTodo({})
     }
 
-    // useEffect( () =>
-    //     {
-    //         props.addTodo(todo)
-    // }, [ todo ] )
-
-    return ( 
-        <form onSubmit={submiteHandler}>
-            <input type="text" placeholder="Add a new title..." name="title" value={todo.title} onChange={changeHandler}/>
-            <textarea placeholder="enter your discritopn" name="description" value={todo.describtion} onChange={changeHandler} />
-            <input type="submit" value="Add"/>
+    return (
+        <form onSubmit={ submiteHandler }>
+            <div className={styles.inputs}>
+                <input type="text" placeholder="Add a new title..." name="title" className={ styles.title } value={ todo.title } onChange={ changeHandler } />
+                <textarea placeholder="Enter your description" name="description" className={ styles.description } value={ todo.describtion } onChange={ changeHandler } />
+            </div>
+            <input type="Submit" className={styles.submitBtn} value="Add"/>
         </form>
-     );
+    );
 }
  
 export default TodoForm
