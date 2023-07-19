@@ -26,12 +26,12 @@ form {
 }
 
 .description{
-    height: 100px;
+    height: 80px;
 }
 
 .inputs{
     width: 75%;
-    height: 160px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

@@ -7,12 +7,13 @@ import UncompletedCount from "../UncompletedCounter/UncompletedCounter";
 const TodoApp = () => {
     
     const [todos, setTodos] = useState([]);
-    const [filteredTodos, setFilteredTodos] = useState([]);
+    const [ filteredTodos, setFilteredTodos ] = useState( [] );
+    const [ status, setStatus ] = useState();
 
     useEffect(() => {
-        const updatedTodos = changeHandler('all');
+        const updatedTodos = changeHandler(status);
         setFilteredTodos(updatedTodos);
-    }, [todos]);
+    }, [todos,status]);
 
     const addTodo = (newTodo) => {
         setTodos([...todos, newTodo]);
@@ -30,7 +31,10 @@ const TodoApp = () => {
         setTodos([...updatedTodos]);
     }
 
-    const changeHandler = (status) => {
+    const changeHandler = ( newStatus ) =>
+    {
+        
+        setStatus(newStatus)
         switch (status) {
             case 'Completed':
                 return todos.filter(i => i.isCompleted);
