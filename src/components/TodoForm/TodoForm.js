@@ -31,7 +31,6 @@ const TodoForm = ( props ) =>
             
         e.preventDefault()
         props.addTodo( todo )
-        
         setTodo({})
     }
 
@@ -44,6 +43,7 @@ const TodoForm = ( props ) =>
             <input type="Submit" className={styles.submitBtn} value="Add"/>
         </form>
     );
+
 }
  
 export default TodoForm
