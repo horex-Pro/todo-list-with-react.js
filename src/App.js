@@ -1,12 +1,12 @@
 import TodoApp from "./components/TodoApp/TodoApp";
-import styles from './App.css'
+import styles from "./App.css";
 
 const App = () => {
-  return ( 
+  return (
     <div className="app" style={styles.app}>
-      <TodoApp/>
+      <TodoApp />
     </div>
-   );
-}
- 
+  );
+};
+
 export default App;
